@@ -302,6 +302,10 @@ public class NewPostActivity extends AppCompatActivity {
             mediaType = "audio";
             mediaUri = file.uri;
             mRecorder.start();
+            // El micro mientras está grabando se pone de color ROJO
+            mMicButton.setBackground(this.getResources().getDrawable(R.drawable.ic_mic_red));
+
+
         }
     }
 
@@ -310,6 +314,10 @@ public class NewPostActivity extends AppCompatActivity {
             mRecorder.stop();
             mRecorder.release();
             mRecorder = null;
+            //Si deja de grabar vuelve a su color normal BLACK
+            mMicButton.setBackground(this.getResources().getDrawable(R.drawable.ic_mic_black_24dp));
+
+
         }
     }
 }
