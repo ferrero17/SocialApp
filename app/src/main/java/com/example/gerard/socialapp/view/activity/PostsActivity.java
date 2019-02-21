@@ -119,7 +119,8 @@ public class PostsActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-
+            Intent intent = new Intent(PostsActivity.this,ProfileActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

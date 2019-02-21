@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         comeIn();
     }
 
+
+
+
     void comeIn(){
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if (firebaseUser != null) {

@@ -10,10 +10,12 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.gerard.socialapp.GlideApp;
 import com.example.gerard.socialapp.MediaFiles;
@@ -302,9 +304,11 @@ public class NewPostActivity extends AppCompatActivity {
             mediaType = "audio";
             mediaUri = file.uri;
             mRecorder.start();
-            // El micro mientras está grabando se pone de color ROJO
+            // El micro mientras está grabando se pone de color ROJO + TOAST informativo
             mMicButton.setBackground(this.getResources().getDrawable(R.drawable.ic_mic_red));
-
+            Toast toast = Toast.makeText(getApplicationContext(), "RECORDING", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0,0);
+            toast.show();
 
         }
     }
@@ -314,8 +318,11 @@ public class NewPostActivity extends AppCompatActivity {
             mRecorder.stop();
             mRecorder.release();
             mRecorder = null;
-            //Si deja de grabar vuelve a su color normal BLACK
+            //Si deja de grabar vuelve a su color normal BLACK + TOAST informativo
             mMicButton.setBackground(this.getResources().getDrawable(R.drawable.ic_mic_black_24dp));
+            Toast toast = Toast.makeText(getApplicationContext(), " STOP RECORDING", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM,0 ,0 );
+            toast.show();
 
 
         }
