@@ -49,7 +49,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/editor/ic_attach_file_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/image/ic_camera_alt_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -59,9 +59,13 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="e0245e" />
-                            <entry key="outputName" value="anyadirpost" />
-                            <entry key="sourceFile" value="C:\Users\Dani" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="color" value="010000" />
+                            <entry key="height" value="8" />
+                            <entry key="outputName" value="ic_iconomp3" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\Dani\Desktop\iconomp3.svg" />
+                            <entry key="width" value="8" />
                           </map>
                         </option>
                       </PersistentState>

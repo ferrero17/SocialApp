@@ -38,21 +38,13 @@ import java.util.UUID;
 
 public class NewPostActivity extends AppCompatActivity {
 
-    public int getTotalPosts() {
-        return totalPosts;
-    }
-
-    public void setTotalPosts(int totalPosts) {
-        this.totalPosts = totalPosts;
-    }
-
-    public int totalPosts = 0;
 
     static final int RC_IMAGE_TAKE = 8000;
     static final int RC_VIDEO_TAKE = 8001;
     static final int RC_IMAGE_PICK = 9000;
     static final int RC_VIDEO_PICK = 9001;
     static final int RC_AUDIO_PICK = 9002;
+    static final int RC_AUDIO_TAKE = 8002;
 
     static final int REQUEST_RECORD_AUDIO_PERMISSION = 1212;
     private boolean permissionToRecordAccepted = false;
@@ -191,7 +183,7 @@ public class NewPostActivity extends AppCompatActivity {
             } else if (requestCode == RC_AUDIO_PICK) {
                 mediaUri = data.getData();
                 mediaType = "audio";
-                GlideApp.with(this).load(mediaUri).into(imagePreview);
+                 GlideApp.with(this).load(R.drawable.ic_iconomp3).into(imagePreview);
             }
         }
     }
@@ -208,10 +200,10 @@ public class NewPostActivity extends AppCompatActivity {
 
         if (mediaType == null) {
             writeNewPost(postText, null);
-            totalPosts++;
+
         } else {
             uploadAndWriteNewPost(postText);
-            totalPosts++;
+
         }
 
     }
@@ -332,6 +324,8 @@ public class NewPostActivity extends AppCompatActivity {
             mRecorder = null;
             //Si deja de grabar vuelve a su color normal BLACK + TOAST informativo
             mMicButton.setBackground(this.getResources().getDrawable(R.drawable.ic_mic_black_24dp));
+            //Preview de una imagen conforme se ha cargado un audio grabado
+            GlideApp.with(this).load(R.drawable.ic_iconomp3).into(imagePreview);
             Toast toast = Toast.makeText(getApplicationContext(), " STOP RECORDING", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0 ,0 );
             toast.show();
