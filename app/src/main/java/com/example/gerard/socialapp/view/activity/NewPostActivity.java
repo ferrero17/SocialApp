@@ -38,6 +38,16 @@ import java.util.UUID;
 
 public class NewPostActivity extends AppCompatActivity {
 
+    public int getTotalPosts() {
+        return totalPosts;
+    }
+
+    public void setTotalPosts(int totalPosts) {
+        this.totalPosts = totalPosts;
+    }
+
+    public int totalPosts = 0;
+
     static final int RC_IMAGE_TAKE = 8000;
     static final int RC_VIDEO_TAKE = 8001;
     static final int RC_IMAGE_PICK = 9000;
@@ -198,8 +208,10 @@ public class NewPostActivity extends AppCompatActivity {
 
         if (mediaType == null) {
             writeNewPost(postText, null);
+            totalPosts++;
         } else {
             uploadAndWriteNewPost(postText);
+            totalPosts++;
         }
 
     }
