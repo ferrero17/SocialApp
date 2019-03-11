@@ -74,8 +74,6 @@ public class ProfileActivity extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
 
-
-
                 }
             });
 

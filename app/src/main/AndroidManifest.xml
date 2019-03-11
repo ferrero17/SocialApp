@@ -26,7 +26,9 @@
             android:label="@string/title_activity_posts"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.activity.MediaActivity" />
-        <activity android:name=".view.activity.NewPostActivity" android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".view.activity.NewPostActivity"
+            android:configChanges="screenSize|orientation" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -39,7 +41,8 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".view.activity.ProfileActivity"></activity>
+        <activity android:name=".view.activity.ProfileActivity" />
+        <activity android:name=".view.activity.GaleriaActivity"></activity>
     </application>
 
 </manifest>

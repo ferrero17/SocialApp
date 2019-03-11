@@ -123,6 +123,9 @@ public class PostsActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
 
+            Intent intent = new Intent(PostsActivity.this,GaleriaActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
